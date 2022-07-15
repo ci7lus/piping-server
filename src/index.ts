@@ -19,7 +19,7 @@ const parser = yargs
   })
   .option("http-port", {
     describe: "Port of HTTP server",
-    default: 8080
+    default: process.env.PORT || '8080'
   })
   .option("enable-https", {
     describe: "Enable HTTPS",
@@ -42,7 +42,7 @@ const parser = yargs
 // Parse arguments
 const args = parser.parseSync(process.argv.slice(2));
 const host: string | undefined = args["host"];
-const httpPort: number = args["http-port"];
+const httpPort: string = args["http-port"];
 const enableHttps: boolean = args["enable-https"];
 const httpsPort: number | undefined = args["https-port"];
 const serverKeyPath: string | undefined = args["key-path"];
