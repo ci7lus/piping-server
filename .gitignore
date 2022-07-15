@@ -1,5 +1,4 @@
 /node_modules
 /dist
-/src/version.ts
 
 /ssl_certs
