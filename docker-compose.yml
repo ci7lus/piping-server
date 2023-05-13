@@ -1,0 +1,5 @@
+services:
+  app:
+    image: nwtgck/piping-server
+    ports:
+      - "8080:8080"
